@@ -1,15 +1,18 @@
 \documentclass[aps, reprint,amsmath,amssymb]{revtex4-1} %APS Journal
-\usepackage{dcolumn}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
 \usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{siunitx}
 \usepackage{bm}
 
-\renewcommand{\vec}[1]{\mathbf{#1}}
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
 \newcommand{\mat}[1]{\mathbf{#1}}
 \newcommand{\uv}[1]{\vec{\hat{#1}}}
 \newcommand{\x}{\vec{\hat{x}}}
 \newcommand{\y}{\vec{\hat{y}}}
+\newcommand{\z}{\vec{\hat{z}}}
 \renewcommand{\d}{\partial}
 \renewcommand{\L}{\mathcal{L}}
 \renewcommand{\inf}{\infty}
@@ -29,6 +32,66 @@
 %----------------------------------------------------------------------
 \section{Introduction}
 
+\section{Theory}
+
+We have a long rod of length $2d$ and width $w$, with two spherical masses
+of radius $r$ at each end.  The rod has linear mass density $\sigma$, and
+the two masses have mass $m$. Two large tungsten masses, each with mass $M$
+and radius $R$, are placed near the smaller masses. The rod is allowed
+to rotate about its center, which we will use as the origin, with the rod
+and all masses existing in the $x$-$y$ plane. Each small spherical mass has
+moment of inertia $I_\text{sphere} = 2mr^2/5 + md^2$, and the beam has
+moment of inertia $I_\text{beam} = 2d\sigma(4d^2 + w^2)/12$. Thus, the
+total moment of inertia is
+\begin{equation}
+    \label{eq:moment_of_inertia}
+    I = 2I_\text{sphere} + I_\text{beam} 
+    = \frac{2}{5} m (2 r^2 + 5 d^2) + \frac{1}{6}d\sigma(w^2 + 4d^2).
+\end{equation}
+We can then determine the equation of motion of the rod using
+\begin{equation}
+    \sum_i \vec{\tau}_i = I \frac{d^2\vec{\theta}}{dt^2},
+\end{equation}
+where we sum over all of the torques acting on the system. 
+
+CoUntitled-1nsider the system with only one of the tungsten spheres. Due to symmetry,
+the other sphere will result in the same torque acting on the system, and
+so we need only multiply by two at the end. Let $\vec{r} = d\x + b\y$ be the
+position of the tungsten sphere. The two smaller spheres are at positions
+$\vec{r}_1 = d \cos\theta\,\x + d \sin \theta \, \y$ and $\vec{r}_2 = -d
+\cos \theta\,\x - d \sin \theta \, \y$. Thus, the separations between the
+tungsten spheres and the smaller spheres are
+\[
+    \vec{R}_1 = \vec{r} - \vec{r}_1 = d(1 - \cos\theta)\x + (b -
+    d\sin\theta) \y
+\]
+and
+\[
+    \vec{R}_2 = \vec{r} - \vec{r}_2 = d(1 + \cos\theta)\x + (b + d \sin
+    \theta) \y.
+\]
+The forces acting on each small sphere are
+\begin{equation}
+    \label{eq:forces}
+    \vec{F}_k = \frac{G M m}{R_k^2}\,\uv{R}_k,
+\end{equation}
+where $k = 1$ or 2 depending on the sphere we look at. The corresponding
+torques are therefore
+\begin{equation}
+    \label{eq:torques}
+    \vec{\tau}_k = \vec{r}_k \times \vec{F}_k.
+\end{equation}
+
+We now look to determine the torque acting on the rod itself. A small mass
+element of the rod has mass $dm = \sigma\,dl$, where $dl$ is an
+infinitesimal length. Choose a point $l$ on the rod, with $-d\leq l \leq
+d$. Then the position of that point is $\vec{p} = l\cos\theta\,\x +
+l\sin\theta\,\y$. The force acting on that particular point on the rod is
+\[
+    d\vec{F} = \frac{G M \sigma}{(\vec{r} - \vec{p})^2} \frac{\vec{r} -
+    \vec{p}}{|\vec{r} - \vec{p}|} \, dl
+\]
+    
 \section{Data}
 
 \section{Analysis}
