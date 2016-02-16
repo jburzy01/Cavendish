@@ -89,9 +89,35 @@ d$. Then the position of that point is $\vec{p} = l\cos\theta\,\x +
 l\sin\theta\,\y$. The force acting on that particular point on the rod is
 \[
     d\vec{F} = \frac{G M \sigma}{(\vec{r} - \vec{p})^2} \frac{\vec{r} -
-    \vec{p}}{|\vec{r} - \vec{p}|} \, dl
+    \vec{p}}{|\vec{r} - \vec{p}|} \, dl.
 \]
-    
+We therefore find the torque to be
+\begin{equation}
+    \label{eq:rod_torque}
+    \vec{\tau}_\text{rod} = \int \vec{p} \times d\vec{F}
+    = G M \sigma \int_{-d}^d \frac{\vec{p}\times\vec{r}}{|\vec{r} -
+    \vec{p}|^3} \, dl
+\end{equation}
+Expanding the terms, this integral is
+\[
+G M \sigma \int_{-d}^d \frac{l (b \cos \theta - d \sin \theta)\z}
+{[l^2 - 2l (d \cos \theta + b \sin \theta) + b^2 + d^2]^{3/2}}\, dl.
+\]
+Let $\alpha = d \cos \theta + b \sin \theta$ and $\beta^2 = b^2 + d^2$.
+For convenience, we will ignore the constant factors for now. 
+We can rewrite the above as
+\[
+    \int_{-d}^{d} \frac{l\,dl}
+    {[ (l - \alpha - \beta) (l - \alpha + \beta)]^{3/2}}.
+\]
+Using the substitution $u = l - \alpha$, this simplifies to
+\[
+    \int \frac{u + \alpha}{(u^2 - \beta^2)^{3/2}}\,du
+    = -\left.\frac{\alpha (l-\alpha) + \beta^2}
+    {\beta^2 \sqrt{(l-\alpha)^2 - \beta^2}} \right|_{-d}^{d}.
+\]
+
+
 \section{Data}
 
 \section{Analysis}
