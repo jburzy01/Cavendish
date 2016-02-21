@@ -45,16 +45,16 @@ moment of inertia $I_\text{beam} = 2d\sigma(4d^2 + w^2)/12$. Thus, the
 total moment of inertia is
 \begin{equation}
     \label{eq:moment_of_inertia}
-    I = 2I_\text{sphere} + I_\text{beam} 
-    = \frac{2}{5} m (2 r^2 + 5 d^2) + \frac{1}{6}d\sigma(w^2 + 4d^2).
+    I = \frac{2}{5} m (2 r^2 + 5 d^2) + \frac{1}{6}d\sigma(w^2 + 4d^2).
 \end{equation}
-We can then determine the equation of motion of the rod using
+We can then determine the equilibrium point by solving the following
+equation:
 \begin{equation}
     \sum_i \vec{\tau}_i = I \frac{d^2\vec{\theta}}{dt^2},
 \end{equation}
 where we sum over all of the torques acting on the system. 
 
-CoUntitled-1nsider the system with only one of the tungsten spheres. Due to symmetry,
+Consider the system with only one of the tungsten spheres. Due to symmetry,
 the other sphere will result in the same torque acting on the system, and
 so we need only multiply by two at the end. Let $\vec{r} = d\x + b\y$ be the
 position of the tungsten sphere. The two smaller spheres are at positions
@@ -110,7 +110,8 @@ We can rewrite the above as
     \int_{-d}^{d} \frac{l\,dl}
     {[ (l - \alpha - \beta) (l - \alpha + \beta)]^{3/2}}.
 \]
-Using the substitution $u = l - \alpha$, this simplifies to
+Using the substitution $u = l - \alpha$, this can be integrated to
+find
 \[
     \int \frac{u + \alpha}{(u^2 - \beta^2)^{3/2}}\,du
     = -\left.\frac{\alpha (l-\alpha) + \beta^2}
