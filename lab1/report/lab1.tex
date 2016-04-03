@@ -160,8 +160,30 @@ where $\theta_0$ is the equilibrium angle of the rod when the two large
 tungsten spheres are not present. The value of $\lambda$ must be determined
 experimentally. 
 
-To determine $\lambda$, we let the rod oscillate about a new equilibrium
-angle $\theta$ which is to be found experimentally. The
+The total torque is thus
+\[
+    \sum \vec{\tau}_i = 2(\vec{r}_1 \times \vec{F}_1 + \vec{r}_2 \times
+    \vec{F}_2 + \tau_\text{rod}) + \tau_\text{twist} = 0.
+\]
+Solving for $G$ yields
+\begin{widetext}
+\begin{equation}
+    G = \frac{1}{2} \lambda (\theta - \theta_0)
+    \times \left[
+        Mm \left(\frac{1}{R_1^2} + \frac{1}{R_2^2}\right)
+        - \frac{M \sigma}{\beta^2}
+        |\uv{p} \times \vec{r}| 
+        \left(
+        \frac{\alpha  (2 \alpha +L)-2 \beta ^2}{\sqrt{(2 \alpha +L)^2-4
+        \beta^2}}
+        +\frac{\alpha  (L-2 \alpha ) + 2\beta^2}{\sqrt{(L-2 \alpha )^2-4
+        \beta ^2}}
+        \right)
+    \right]^{-1}
+    \label{eq:gravitational_constant}
+\end{equation}
+\end{widetext}
+
 
 \section{Data}
 
