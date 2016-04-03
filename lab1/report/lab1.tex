@@ -24,7 +24,8 @@
 \title{PHY64 Experiment 1: The Cavendish Experiment}
 \author{Matthew S. E. Peterson}
 \author{Jackson Burzynski}
-\date{\today} 
+\affiliation{Department of Physics and Astronomy, Tufts University}
+%\date{\today} 
 \maketitle
 
 %----------------------------------------------------------------------
@@ -34,23 +35,24 @@
 
 \section{Theory}
 
-We have a long rod of length $2d$ and width $w$, with two spherical masses
-of radius $r$ at each end.  The rod has linear mass density $\sigma$, and
-the two masses have mass $m$. Two large tungsten masses, each with mass $M$
-and radius $R$, are placed near the smaller masses. The rod is allowed
-to rotate about its center, which we will use as the origin, with the rod
-and all masses existing in the $x$-$y$ plane. Each small spherical mass has
-moment of inertia $I_\text{sphere} = 2mr^2/5 + md^2$, and the beam has
-moment of inertia $I_\text{beam} = 2d\sigma(4d^2 + w^2)/12$. Thus, the
-total moment of inertia is
+Consider a rod with two spherical masses of radius $r$ at each end.  The
+rod has linear mass density $\sigma$ and length $L=2(d + r)$, where $d$ is
+the distance from the center of the rod to each sphere. The two masses have
+mass $m$. Two large tungsten masses, each with mass $M$ and radius $R$, are
+placed near the smaller masses. The rod is allowed to rotate about its
+center, which we will use as the origin, with the rod and all masses
+existing in the $x$-$y$ plane. Each small spherical mass has moment of
+inertia $I_\text{sphere} = 2mr^2/5 + md^2$, and the beam has moment of
+inertia $I_\text{beam} = L\sigma(L^2 + w^2)/12$. Thus, the total moment
+of inertia is
 \begin{equation}
     \label{eq:moment_of_inertia}
-    I = \frac{2}{5} m (2 r^2 + 5 d^2) + \frac{1}{6}d\sigma(w^2 + 4d^2).
+    I = \frac{2}{5} m (2 r^2 + 5 d^2) + \frac{L\sigma}{12}(L^2 + w^2).
 \end{equation}
 We can then determine the equilibrium point by solving the following
 equation:
 \begin{equation}
-    \sum_i \vec{\tau}_i = I \frac{d^2\vec{\theta}}{dt^2},
+    \sum_i \vec{\tau}_i = 0,
 \end{equation}
 where we sum over all of the torques acting on the system. 
 
@@ -93,14 +95,14 @@ l\sin\theta\,\y$. The force acting on that particular point on the rod is
 \]
 We therefore find the torque to be
 \begin{equation}
-    \label{eq:rod_torque}
+    \label{eq:almost_rod_torque}
     \vec{\tau}_\text{rod} = \int \vec{p} \times d\vec{F}
     = G M \sigma \int_{-d}^d \frac{\vec{p}\times\vec{r}}{|\vec{r} -
     \vec{p}|^3} \, dl
 \end{equation}
 Expanding the terms, this integral is
 \[
-G M \sigma \int_{-d}^d \frac{l (b \cos \theta - d \sin \theta)\z}
+    G M \sigma \int_{-L/2}^{L/2} \frac{l (\uv{p} \times \vec{r}) }
 {[l^2 - 2l (d \cos \theta + b \sin \theta) + b^2 + d^2]^{3/2}}\, dl.
 \]
 Let $\alpha = d \cos \theta + b \sin \theta$ and $\beta^2 = b^2 + d^2$.
@@ -115,9 +117,30 @@ find
 \[
     \int \frac{u + \alpha}{(u^2 - \beta^2)^{3/2}}\,du
     = -\left.\frac{\alpha (l-\alpha) + \beta^2}
-    {\beta^2 \sqrt{(l-\alpha)^2 - \beta^2}} \right|_{-d}^{d}.
+    {\beta^2 \sqrt{(l-\alpha)^2 - \beta^2}} \right|_{-L/2}^{L/2}.
 \]
+Thus, we have that
+\begin{equation}\label{eq:rod_torque}
+    \vec{\tau}_\text{Rod} = - G M \sigma (\uv{p}\times\vec{r}) 
+    \left.
+    \frac{\alpha (l - \alpha) + \beta^2}
+    {\beta^2 \sqrt{(l-\alpha)^2 - \beta^2}}
+    \right|_{l=-L/2}^{l = L/2}.
+\end{equation}
 
+We finally consider the torque caused by the twisting of a thin tungsten
+wire holding up the rod. Using a torsional pendulum as the model, we expect
+the torque to have the form
+\begin{equation}
+    \label{eq:torsional_pendulum}
+    \vec{\tau}_\text{twist} = - \lambda (\theta - \theta_0) \,\z,
+\end{equation}
+where $\theta_0$ is the equilibrium angle of the rod when the two large
+tungsten spheres are not present. The value of $\lambda$ must be determined
+experimentally. 
+
+To determine $\lambda$, we let the rod oscillate about a new equilibrium
+angle $\theta$ which is to be found experimentally. The
 
 \section{Data}
 
