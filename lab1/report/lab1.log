@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.2.14)  3 APR 2016 19:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.2.14)  3 APR 2016 21:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1052,103 +1052,84 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 194.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 194.
- <figs/drivenplot.png, id=20, 361.35pt x 238.8925pt>
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] <figs/drivenplot.png, i
+d=20, 361.35pt x 238.8925pt>
 File: figs/drivenplot.png Graphic file (type png)
 
 <use figs/drivenplot.png>
-Package pdftex.def Info: figs/drivenplot.png used on input line 196.
+Package pdftex.def Info: figs/drivenplot.png used on input line 202.
 (pdftex.def)             Requested size: 227.62204pt x 150.48483pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 203.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 203.
 
-<figs/counterclockwise1plot.png, id=21, 361.35pt x 229.85875pt>
-File: figs/counterclockwise1plot.png Graphic file (type png)
-
-<use figs/counterclockwise1plot.png>
-Package pdftex.def Info: figs/counterclockwise1plot.png used on input line 202.
-
-(pdftex.def)             Requested size: 227.62204pt x 144.79422pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/counterclockwise2plot.png, id=22, 361.35pt x 232.87pt>
+<figs/counterclockwise2plot.png, id=21, 361.35pt x 232.87pt>
 File: figs/counterclockwise2plot.png Graphic file (type png)
 
 <use figs/counterclockwise2plot.png>
-Package pdftex.def Info: figs/counterclockwise2plot.png used on input line 208.
+Package pdftex.def Info: figs/counterclockwise2plot.png used on input line 209.
 
 (pdftex.def)             Requested size: 227.62204pt x 146.6911pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/clockwise1plot.png, id=23, 361.35pt x 226.8475pt>
+<figs/clockwise1plot.png, id=22, 361.35pt x 226.8475pt>
 File: figs/clockwise1plot.png Graphic file (type png)
 
 <use figs/clockwise1plot.png>
-Package pdftex.def Info: figs/clockwise1plot.png used on input line 214.
+Package pdftex.def Info: figs/clockwise1plot.png used on input line 215.
 (pdftex.def)             Requested size: 227.62204pt x 142.89737pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/clockwise2plot.png, id=24, 361.35pt x 229.85875pt>
-File: figs/clockwise2plot.png Graphic file (type png)
-
-<use figs/clockwise2plot.png>
-Package pdftex.def Info: figs/clockwise2plot.png used on input line 220.
-(pdftex.def)             Requested size: 227.62204pt x 144.79422pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/calibration.png, id=25, 361.35pt x 236.885pt>
+<figs/calibration.png, id=23, 361.35pt x 236.885pt>
 File: figs/calibration.png Graphic file (type png)
  <use figs/calibration.png>
 Package pdftex.def Info: figs/calibration.png used on input line 228.
 (pdftex.def)             Requested size: 227.62204pt x 149.22026pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 236.
 
-[2 <./figs/drivenplot.png (PNG copy)> <./figs/counterclockwise1plot.png (PNG co
-py)> <./figs/counterclockwise2plot.png (PNG copy)>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--256
+[]\T1/lmr/m/n/10 (+20) We ex-per-i-men-tally de-ter-mined that $\OML/lmm/m/it/1
+0 ![] \OT1/lmr/m/n/10 (+20) =
+ []
+
+[2 <./figs/drivenplot.png (PNG copy)> <./figs/counterclockwise2plot.png (PNG co
+py)>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 240.
+ on input line 258.
 
-(./lab1.bbl) [3 <./figs/clockwise1plot.png (PNG copy)> <./figs/clockwise2plot.p
-ng (PNG copy)> <./figs/calibration.png (PNG copy)>] (./lab1.aux) ) 
+(./lab1.bbl) [3 <./figs/clockwise1plot.png (PNG copy)> <./figs/calibration.png 
+(PNG copy)>] (./lab1.aux) ) 
 Here is how much of TeX's memory you used:
- 15129 strings out of 495000
- 295121 string characters out of 6181169
- 346948 words of memory out of 5000000
- 18081 multiletter control sequences out of 15000+600000
- 86420 words of font info for 112 fonts, out of 8000000 for 9000
+ 15124 strings out of 495000
+ 294897 string characters out of 6181169
+ 346976 words of memory out of 5000000
+ 18077 multiletter control sequences out of 15000+600000
+ 89408 words of font info for 113 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 39i,5n,39p,10386b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/t
-exmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-r
-m.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/font
-s/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</u
-sr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi
-b10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmsy9.pfb>
-Output written on lab1.pdf (3 pages, 315343 bytes).
+ 39i,13n,40p,10386b,779s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{
+/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips
+/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/te
+xmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lm
+bx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pf
+b>
+Output written on lab1.pdf (3 pages, 282046 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26655 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 27157 words of extra memory for PDF output out of 29859 (max. 10000000)
 

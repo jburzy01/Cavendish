@@ -126,26 +126,26 @@ Expanding the terms, this integral is
     G M \sigma \int_{-L/2}^{L/2} \frac{l (\uv{p} \times \vec{r}) }
 {[l^2 - 2l (d \cos \theta + b \sin \theta) + b^2 + d^2]^{3/2}}\, dl.
 \]
-Let $\alpha = d \cos \theta + b \sin \theta$ and $\beta^2 = b^2 + d^2$.
+Let $\alpha = d \cos \theta + b \sin \theta$ and $r = |\vec{r}|$.
 For convenience, we will ignore the constant factors for now. 
 We can rewrite the above as
 \[
     \int_{-d}^{d} \frac{l\,dl}
-    {[ (l - \alpha - \beta) (l - \alpha + \beta)]^{3/2}}.
+    {[ (l - \alpha - r) (l - \alpha + r)]^{3/2}}.
 \]
 Using the substitution $u = l - \alpha$, this can be integrated to
 find
 \[
-    \int \frac{u + \alpha}{(u^2 - \beta^2)^{3/2}}\,du
-    = -\left.\frac{\alpha (l-\alpha) + \beta^2}
-    {\beta^2 \sqrt{(l-\alpha)^2 - \beta^2}} \right|_{-L/2}^{L/2}.
+    \int \frac{u + \alpha}{(u^2 - r^2)^{3/2}}\,du
+    = -\left.\frac{\alpha (l-\alpha) + r^2}
+    {r^2 \sqrt{(l-\alpha)^2 - r^2}} \right|_{-L/2}^{L/2}.
 \]
 Thus, we have that
 \begin{equation}\label{eq:rod_torque}
     \vec{\tau}_\text{Rod} = - G M \sigma (\uv{p}\times\vec{r}) 
     \left.
-    \frac{\alpha (l - \alpha) + \beta^2}
-    {\beta^2 \sqrt{(l-\alpha)^2 - \beta^2}}
+    \frac{\alpha (l - \alpha) + r^2}
+    {r^2 \sqrt{(l-\alpha)^2 - r^2}}
     \right|_{l=-L/2}^{l = L/2}.
 \end{equation}
 
@@ -163,7 +163,7 @@ experimentally.
 The total torque is thus
 \[
     \sum \vec{\tau}_i = 2(\vec{r}_1 \times \vec{F}_1 + \vec{r}_2 \times
-    \vec{F}_2 + \tau_\text{rod}) + \tau_\text{twist} = 0.
+    \vec{F}_2 + \vec{\tau}_\text{rod}) + \vec{\tau}_\text{twist} = 0.
 \]
 Solving for $G$ yields
 \begin{widetext}
@@ -171,89 +171,98 @@ Solving for $G$ yields
     G = \frac{1}{2} \lambda (\theta - \theta_0)
     \times \left[
         Mm \left(\frac{1}{R_1^2} + \frac{1}{R_2^2}\right)
-        - \frac{M \sigma}{\beta^2}
+        - \frac{M \sigma}{r^2}
         |\uv{p} \times \vec{r}| 
         \left(
-        \frac{\alpha  (2 \alpha +L)-2 \beta ^2}{\sqrt{(2 \alpha +L)^2-4
-        \beta^2}}
-        +\frac{\alpha  (L-2 \alpha ) + 2\beta^2}{\sqrt{(L-2 \alpha )^2-4
-        \beta ^2}}
+        \frac{\alpha  (2 \alpha +L)-2 r^2}{\sqrt{(2 \alpha +L)^2-4
+        r^2}}
+        +\frac{\alpha  (L-2 \alpha ) + 2r^2}{\sqrt{(L-2 \alpha )^2-4
+        r^2}}
         \right)
-    \right]^{-1}
+    \right]^{-1}.
     \label{eq:gravitational_constant}
 \end{equation}
 \end{widetext}
+After $\lambda$, $\theta$ and $\theta_0$ are determined experimentally,
+this equation will be used to calculate the value of $G$. 
 
 
-\section{Data}
+\section{Results}
 
-Using Mathematica we fit our data to a damped cosine wave to determine the displacement from equilibrium $\delta$, the angular frequency $\omega$, and the decay parameter $\beta$. The data sets and their fits are shown below.
+Using Mathematica, we fit our data to a damped cosine wave to determine the
+displacement from equilibrium $\delta$, the angular frequency $\omega$, and
+the decay parameter $\beta$. That is, the fit equation was of the form
+\begin{equation} \label{eq:voltage_fit}
+V(t) = A e^{-\beta t} \cos (\omega t + \phi) - \delta.
+\end{equation}
+The data sets and their fits are shown below.
 
-\begin{figure}[h!]
+\begin{figure}[b]
 \centering
-\caption{Driven Oscillations: $\beta = 0.001166$, $\omega = 0.03221$, $\delta=-0.04917$}
-
 \includegraphics[width=8cm]{figs/drivenplot.png}
+\caption{Driven Oscillations: $\beta = 0.001166$, $\omega = 0.03221$, $\delta=-0.04917$}
+\label{fig:driven}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[b]
 \centering
-\caption{Counterclockwise Oscillations Trial 1: $\beta = 0.001260$, $\omega = 0.03240$, $\delta=-0.03934$}
-\includegraphics[width=8cm]{figs/counterclockwise1plot.png}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\caption{Counterclockwise Oscillations Trial 2: $\beta = 0.001199$, $\omega = 0.03212$, $\delta=-0.03436$}
 \includegraphics[width=8cm]{figs/counterclockwise2plot.png}
+\caption{Counterclockwise Oscillations Trial 2: $\beta = 0.001199$, $\omega = 0.03212$, $\delta=-0.03436$}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
-\caption{Clockwise Oscillations Trial 1: $\beta = 0.001130$, $\omega = 0.03222$, $\delta=0.02973$}
 \includegraphics[width=8cm]{figs/clockwise1plot.png}
+\caption{Clockwise Oscillations Trial 1: $\beta = 0.001130$, $\omega = 0.03222$, $\delta=0.02973$}
 \end{figure}
 
-\begin{figure}[h!]
-\centering
-\caption{Clockwise Oscillations Trial 2: $\beta = 0.001385$, $\omega = 0.03208$, $\delta=0.03373$}
-\includegraphics[width=8cm]{figs/clockwise2plot.png}
-\end{figure}
+Using the voltage data from the driven oscillations, we calibrate the
+device by comparing the maximal and minimal values of $V$ with the
+corresponding values of $\theta$ obtained by observing the change in the
+position of the reflected laser beam. The relation between these two
+variables is linear, given by $V = K \theta + C$, where $K$
+and $C$ are fitting parameters.
 
-Using the voltage data from the driven oscillations, we calibrate the device by comparing the maximal and minimal values of $V$ with the corresponding values of $\theta$ obtained by observing the change in the position of the reflected laser beam. The relation between these two variables is linear, given by $V = K \theta + \text{ const}$.
-
-\begin{figure}[h!]
+\begin{figure}
 \centering
-\caption{Calibration Fit: $K=-38.1552$, const=0.8320}
 \includegraphics[width=8cm]{figs/calibration.png}
+\caption{Calibration Fit: $K=-\SI{38.1552}{mV \per \radian}$, $C=\SI{0.8320}{mV}$}
 \end{figure} 
 
-\section{Analysis}
 
-To determine the gravitational force between the lead and tungsten spheres, we first must calculate the torsional constant $\lambda$ given by
-$$
-\lambda = I \left( \frac{2 \pi}{T} \right)^2.
-$$
-where $T$ is the (undamped) period of oscillation. The damped frequency $w_1$ is given by
-$$
-w_1 = \sqrt{w_0^2-\beta^2}
-$$
-where $w_0$ is the natural frequency and $\beta$ is the damping constant. Taking the mean of the fitting parameters obtained by our 5 data sets, we observe that $\omega_1 = 0.03221$ and $\beta = 0.001223$. Thus, 
-$$
-w_0 = \sqrt{w_1^2+\beta^2} = 0.03223
-$$
-and
-$$
-T = \frac{2\pi}{w_0} = 194.944.
-$$
-Using this value of the period and the moment of inertia calculated in section II, we observe that
-$$
-\lambda = 1.45722 \times 10^{-7} \text{ J}
-$$
-By Equation (??), we have that
-$$
-\tau_{\text{ext}} - \lambda(\theta - \theta_0) = 0
-$$
+To determine the torsional constant $\lambda$, we use the fact that the
+period of oscillation is dependent on $\lambda$ by the equation
+\[
+    T = 2\pi \sqrt{I \over \lambda}.
+\]
+Rearranging gives
+\[
+    \lambda = I \left(\frac{2\pi}{T}\right)^2 = I \omega_0^2,
+\]
+where $\omega_0$ is the natural frequency of oscillation. From the fitting
+parameter, we know the damping coefficient $\beta$ and the angular
+frequency $\omega$, where
+\[
+    \omega^2 = \omega_0^2 - \beta^2.
+\]
+Thus, we find the natural frequency from the fit parameters to be
+\[
+    \omega_0^2 = \omega^2 + \beta^2.    
+\]
+
+We experimentally determined that $\omega_0 =
+\SI{32.23e-3}{\radian\per\second}$ and $\beta = \SI{1.223e-3}{\per
+\second}$. Using~\eqref{eq:moment_of_inertia} we find
+\[
+    I = \SI{1.403e-4}{kg.m^2}
+\]
+and therefore we have that
+\[
+    \lambda = \SI{1.457e-7}{N.m/\radian}.
+\]
+From~\eqref{eq:voltage_fit}, we can determine the voltage at equilibrium to
+simply be the fitting parameter $\delta$. 
+
 
 \section{Error}
 
